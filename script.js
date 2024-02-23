@@ -3,7 +3,7 @@
 // Home Section Script Starts
 var typingText = document.querySelector('.text2');
 var myArray = 
-["Web Developer"];
+["Web Developer", "Software Developer"];
 var arrayIndex = 1;
 
 function textReplace(){
@@ -53,3 +53,21 @@ function pageScrollFunction(){
 		homeSection.classList.remove('active');
 	}
 }
+
+
+
+function submitForm(event) {
+	event.preventDefault();
+  
+	var name = document.getElementById('name').value;
+	var email = document.getElementById('email').value;
+	var message = document.getElementById('message').value;
+  
+	// You can use an AJAX request to send the form data to the server
+	// and handle the email sending process on the server side.
+  
+	// For demonstration purposes, we'll just display a response on the page.
+	var responseElement = document.getElementById('response');
+	responseElement.innerHTML = `Thank you, ${name}! Your message has been received.`;
+  }
+  
