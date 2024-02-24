@@ -56,44 +56,16 @@ function pageScrollFunction(){
 
 
 
-function submitForm(event) {
-	event.preventDefault();
-  
-	var name = document.getElementById('name').value;
-	var email = document.getElementById('email').value;
-	var message = document.getElementById('message').value;
-  
-	// You can use an AJAX request to send the form data to the server
-	// and handle the email sending process on the server side.
-  
-	// For demonstration purposes, we'll just display a response on the page.
-	var responseElement = document.getElementById('response');
-	responseElement.innerHTML = `Thank you, ${name}! Your message has been received.`;
-  }
-  
-// get in touch
-
-function sendMessage() {
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var message = document.getElementById("message").value;
-
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "sendEmail.php", true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            alert(xhr.responseText);
-            // Optionally, you can clear the form fields after successful submission
-            document.getElementById("name").value = "";
-            document.getElementById("email").value = "";
-            document.getElementById("message").value = "";
-        }
-    };
-    xhr.send("name=" + name + "&email=" + email + "&message=" + message);
-}
-
-
-
-// php 
-
+document.getElementById(".contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+    
+    // Replace 'your-email@example.com' with your email address
+    let ownerEmail = 'mightymedic98@gmail.com';
+    
+    let mailtoLink = `mailto:${ownerEmail}?subject=Message from ${name}&body=${message}%0D%0A%0D%0AReply to: ${email}`;
+    
+    window.location.href = mailtoLink;
+  });
