@@ -3,7 +3,7 @@
 // Home Section Script Starts
 var typingText = document.querySelector('.text2');
 var myArray = 
-["Web Developer", "Software Developer"];
+["Web Developer"];
 var arrayIndex = 1;
 
 function textReplace(){
@@ -71,3 +71,29 @@ function submitForm(event) {
 	responseElement.innerHTML = `Thank you, ${name}! Your message has been received.`;
   }
   
+// get in touch
+
+function sendMessage() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "sendEmail.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            alert(xhr.responseText);
+            // Optionally, you can clear the form fields after successful submission
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+        }
+    };
+    xhr.send("name=" + name + "&email=" + email + "&message=" + message);
+}
+
+
+
+// php 
+
