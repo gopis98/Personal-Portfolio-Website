@@ -56,16 +56,17 @@ function pageScrollFunction(){
 
 
 
-document.getElementById(".contact-form").addEventListener("submit", function(event) {
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
     event.preventDefault();
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
     let message = document.getElementById("message").value;
     
     // Replace 'your-email@example.com' with your email address
-    let ownerEmail = 'mightymedic98@gmail.com';
+    let ownerEmail = 'gopis2k01@gmail.com';
     
     let mailtoLink = `mailto:${ownerEmail}?subject=Message from ${name}&body=${message}%0D%0A%0D%0AReply to: ${email}`;
     
     window.location.href = mailtoLink;
   });
+  

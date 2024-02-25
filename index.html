@@ -284,6 +284,15 @@
 			</div>
 		</div>
 
+		<div class="project-box">
+			<img src="images/5.jpg">
+			<div class="project-desc">
+				<a href="#">
+					<button class="btn project-desc-btn">Details</button>
+				</a>
+			</div>
+		</div>
+
 
 
 	</div>
@@ -341,32 +350,25 @@
 
 		</div>
 		<!--   === Contact Details Ends ===   -->
+		
 		<!--   === Contact Form Starts ===   -->
 
-		<div class="container1">
-		<form class="contact-form">
-			<div class="input-element name-input">
-				<input type="text" required="required" placeholder="Your Name">
-			</div>
+		<div class="container">
+			<form id="contact-form">
+			  <label for="name">Name:</label>
+			  <input type="text" id="name" name="name" required>
+			  
+			  <label for="email">Email:</label>
+			  <input type="email" id="email" name="email" required>
+			  
+			  <label for="message">Message:</label>
+			  <textarea id="message" name="message" required></textarea>
+			  
+			  <button type="submit">Send Message</button>
+			</form>
+		  </div>
 
-			<div class="input-element email-input">
-				<input type="email" required="required" placeholder="Your Email">
-			</div>
-
-			<div class="text-area">
-				<textarea required="required" placeholder="Your Message"></textarea>
-			</div>
-		</div>
-			<div class="form-button-container">
-				<button class="btn form-btn" style="position: relative; top: 295px; left: 10px;">Send Message</button>
-
-
-				<!-- <input type="button" value="Send Message" class="btn form-btn" style="position: relative; top: 295px; left: 10px;">
-				 -->
-			</div>
-		
-		</form>
-		<!--   === Contact Form Ends ===   -->
+		  <!--   === Contact Form Ends ===   -->
 
 	</div>
 	<!--   === Contact Contents Ends ===   -->
