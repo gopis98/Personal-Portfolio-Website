@@ -460,7 +460,7 @@ section.skills{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 25px 80px;
-	margin-top: 90px;
+	margin-top: 75px;
 }
 .skills-contents .skill-box .skill-name{
 	font-size: 17px;
