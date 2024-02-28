@@ -804,7 +804,7 @@ section.page-footer{
 @media(max-width: 968px){
 	/* Services Section */
 	.services-contents .service-box{
-		flex-basis: 48%;
+		flex-basis: 30%;
 	}
 	/* Blog Section */
 	.blog .blog-contents{
@@ -818,7 +818,7 @@ section.page-footer{
 	}
 }
 
-@media(max-width: 868px){
+@media(max-width: 450px){
 	/* Home Section */
 	.home{
 		margin-bottom: 70px;
